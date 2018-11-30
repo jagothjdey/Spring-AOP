@@ -8,4 +8,8 @@ public class CommonJoinPointConfig {
 	
 	@Pointcut("execution(* com.spring.aop.springaop.business.*.*(..))")
 	public void businessLayerExecution() {}
+	
+	@Pointcut("com.spring.aop.springaop.aop.CommonJoinPointConfig.dataLayerExecution() && "
+			+ "com.spring.aop.springaop.aop.CommonJoinPointConfig.businessLayerExecution()")
+	public void allLayerExecution() {}
 }

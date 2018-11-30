@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeforeAspect {
 private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	@Before("com.spring.aop.springaop.aop.CommonJoinPointConfig.dataLayerExecution())")
+	@Before("com.spring.aop.springaop.aop.CommonJoinPointConfig.allLayerExecution()")
 	public void afterReturning(JoinPoint joinPoint) {
 		logger.info("Method before : {}",joinPoint);
 	}
